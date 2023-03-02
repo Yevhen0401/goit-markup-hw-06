@@ -751,6 +751,18 @@ display: flex;
     fill: var(--color-background-hover);
 }
 
+.contact-form-title {
+    font-family: Roboto; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
 .contact-form-field {
     display: block;
     margin-bottom: 10px;
@@ -773,18 +785,6 @@ display: flex;
     border-color: var(--color-background-hover);
 }
 
-.contact-form-title {
-    font-family: Roboto; 
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--color-text);
-    margin-bottom: 12px;
-}
-
 .contact-form-subtitle {
    color: var(--color-item-adress);
    font-family: 'Roboto';
@@ -793,6 +793,7 @@ display: flex;
    font-size: 12px;
    line-height: 1.15;
    letter-spacing: 0.01em;
+   display: block;
 }
 
 .contact-form-icon {
@@ -830,17 +831,17 @@ display: flex;
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    display: block;
 }
 
 .contact-form-message::placeholder {
     color: rgba(117, 117, 117, 0.5);
-
 }
 
 .contact-form-message:focus {
     border-color: var(--color-background-hover);
-
 }
+
 .contact-form-option {
     text-decoration: underline;
     color: var(--color-background-hover);
@@ -850,7 +851,6 @@ display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
 
 .contact-form-checkbox-label {
     font-family: 'Roboto';
@@ -866,20 +866,20 @@ display: flex;
 }
 
 .contact-form-checkbox-label::before {
-    display: inline-block;
+    display: block;
     width: 16px;
     height: 15px;
     content: ' ';
     cursor: pointer;
-    border: 1px solid #212121;
     margin-right: 8px;
+    background-image: url(../images/dont-checked.svg);
 }
 
 .contact-form-submit {
     min-width: 200px;
     height: 50px;
     padding: 10px 52px;
-    background-color: #2196F3;
+    background-color: var(--color-background-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px; 
     font-family: 'Roboto';
@@ -895,12 +895,15 @@ display: flex;
 }
 
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before  {
-    background-image: url(../images/icon-check.svg);
+    background-image: url(../images/checked.svg);
+    background-color: var(--color-background-hover);
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-size: contain;
+    background-origin: border-box;
 }
 
-.contact-form-checkbox:focus + .contact-form-checkbox-label::before {
-
-}
 
 .visually-hidden {
     position: absolute;
@@ -913,4 +916,67 @@ display: flex;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.subscribe-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-hover);
+}
+
+.subscribe-form-mail {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #2F303A;
+    padding-left: 16px;
+}
+
+.subscribe-submit {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--color-hover);
+    background-color: var(--color-background-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-left: 12px;
+    padding-left: 28px;
+    cursor: pointer;
+}
+
+.telegram-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-left: 93px;
+    margin-top: 20px;
+}
+
+.subscribe-text {
+    margin-left: 93px;
 }
